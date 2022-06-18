@@ -12,8 +12,26 @@ font-family: 'Source Code Pro', monospace;
 
 }
 
+.container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows:auto;
+
+    grid-template-areas:
+    "header header header"
+    "cards cards cards "
+    "foot foot foot"
+}
+
 header {
     text-align: center;
+    grid-area: header;
+}
+
+footer {
+    text-align: center;
+    grid-area: foot;
 }
 
 header p {
@@ -24,6 +42,7 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    grid-area: cards;
 }
 
 .card {
@@ -66,3 +85,4 @@ pre {
     margin-right: auto;
     color: white;
 }
+
